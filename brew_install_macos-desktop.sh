@@ -19,9 +19,21 @@ pretty_print "################################################"
 	cpu="$(sysctl -n machdep.cpu.brand_string)"
 	pretty_print "CPU Type: $cpu"
 
+# Check XCode installation and confirm XCode Licenses
+# pretty_print "################################################"
+# pretty_print "2.) Confirm XCode Licenses"
+# pretty_print "################################################"
+#
+#	pretty_print "Check XCode"
+#	if command sudo xcodebuild -license accept; then
+#		pretty_print "Command line tools are already installed"
+#	else
+#		pretty_print "XCode is not installed. Please install XCode."
+#	fi
+
 # Install Rosetta
 pretty_print "################################################"
-pretty_print "2.) Validate and install Rosetta"
+pretty_print "3.) Validate and install Rosetta"
 pretty_print "################################################"
 
 	pretty_print "Check for Apple M2 Rosetta Installation"

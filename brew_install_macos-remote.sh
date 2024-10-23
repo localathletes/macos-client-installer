@@ -20,16 +20,16 @@ pretty_print "################################################"
 	pretty_print "CPU Type: $cpu"
 
 # Check XCode installation and confirm XCode Licenses
-pretty_print "################################################"
-pretty_print "2.) Confirm XCode Licenses"
-pretty_print "################################################"
-
-	pretty_print "Check XCode"
-	if command sudo xcodebuild -license accept; then
-		pretty_print "Command line tools are already installed"
-	else
-		pretty_print "XCode is not installed. Please install XCode."
-	fi
+# pretty_print "################################################"
+# pretty_print "2.) Confirm XCode Licenses"
+# pretty_print "################################################"
+#
+#	pretty_print "Check XCode"
+#	if command sudo xcodebuild -license accept; then
+#		pretty_print "Command line tools are already installed"
+#	else
+#		pretty_print "XCode is not installed. Please install XCode."
+#	fi
 
 # Install Rosetta
 pretty_print "################################################"
@@ -65,7 +65,7 @@ pretty_print "################################################"
       		  	printf 'export PATH="/usr/local/bin:$PATH"\n' >> ~/.zshrc
       		  	export PATH="/usr/local/bin:$PATH"
 				echo '# Set PATH, MANPATH, etc., for Homebrew.' >> ~/.zprofile
-				echo 'eval "$(/usr/local/bin/brew shellenv)"' >> ~/.zprofile
+				echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 				eval "$(/opt/homebrew/bin/brew shellenv)"
   		fi
 	else
@@ -116,6 +116,12 @@ pretty_print "################################################"
 			
 		pretty_print "Installing Libre Office"
 			brew install --cask libreoffice
+		
+		pretty_print "Installing Microsoft Office"	
+			brew install --cask microsoft-word
+			brew install --cask microsoft-excel
+			brew install --cask microsoft-powerpoint
+			brew install --cask microsoft-teams
 
 	# Install Developer Tools
 	pretty_print "--- Install Developer Tools ---"
@@ -184,4 +190,4 @@ pretty_print "################################################"
 	printf 'export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"' >> ~/.zshrc
 	export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 	
-pretty_print "All set to go."	
+pretty_print "All set to go."
