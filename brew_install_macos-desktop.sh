@@ -122,6 +122,7 @@ pretty_print "################################################"
 			brew install --cask microsoft-excel
 			brew install --cask microsoft-powerpoint
 			brew install --cask microsoft-teams
+			brew install --cask microsoft-outlook
 
 	# Install Developer Tools
 	pretty_print "--- Install Developer Tools ---"
